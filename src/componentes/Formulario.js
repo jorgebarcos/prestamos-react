@@ -6,14 +6,24 @@ class Formulario extends Component {
 		plazo: ''
 	};
 
-	actualizarState = () => {
-		console.log('Estoy Escribiendo...');
+	actualizarState = (e) => {
+		// Lee datos del formulario
+		console.log(e.target.value);
+
+		const { name, value } = e.target;
+
+		// actualizar el state
+		this.setState({
+			[name]: Number(value)
+		});
 	};
 	render() {
+		const { cantidad } = this.state;
+
 		return (
 			<form>
 				<div>
-					<label>Cantidad Prestamo: </label>
+					<label>Cantidad Prestamo:</label>
 					<input
 						onChange={this.actualizarState}
 						type="number"
@@ -24,7 +34,7 @@ class Formulario extends Component {
 				</div>
 				<div>
 					<label>Plazo para pagar:</label>
-					<select name="plazo" className="u-full-width">
+					<select onChange={this.actualizarState} name="plazo" className="u-full-width">
 						<option value="">Seleccionar</option>
 						<option value="3">3 Meses</option>
 						<option value="">6 Meses</option>
