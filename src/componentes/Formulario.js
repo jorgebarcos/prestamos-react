@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
 
 class Formulario extends Component {
-	state = {};
+	state = {
+		cantidad: '',
+		plazo: ''
+	};
+
+	actualizarState = () => {
+		console.log('Estoy Escribiendo...');
+	};
 	render() {
 		return (
 			<form>
 				<div>
-					<label>Cantidad Prestamo:</label>
-					<input type="number" name="cantidad" className="u-full-width" placeholder="Ejemplo: 3000" />
+					<label>Cantidad Prestamo: </label>
+					<input
+						onChange={this.actualizarState}
+						type="number"
+						name="cantidad"
+						className="u-full-width"
+						placeholder="Ejemplo: 3000"
+					/>
 				</div>
 				<div>
-					<label>Plazo para pagar</label>
+					<label>Plazo para pagar:</label>
 					<select name="plazo" className="u-full-width">
 						<option value="">Seleccionar</option>
 						<option value="3">3 Meses</option>
