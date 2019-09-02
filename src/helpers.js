@@ -17,10 +17,32 @@ export function calcularTotal(cantidad, plazo) {
 		totalCantidad = cantidad * 0.1;
 	}
 
-	console.log(totalCantidad);
+	//console.log(totalCantidad);
 	// Meses
 	// 3 = 5%
 	// 6 = 10%
 	// 12 = 15%
 	// 24 = 20%
+
+	let totalPlazo;
+
+	switch (plazo) {
+		case 3:
+			totalPlazo = cantidad * 0.05;
+			break;
+		case 6:
+			totalPlazo = cantidad * 0.1;
+			break;
+		case 12:
+			totalPlazo = cantidad * 0.15;
+			break;
+		case 24:
+			totalPlazo = cantidad * 0.2;
+			break;
+
+		default:
+			break;
+	}
+
+	return cantidad + totalPlazo + totalCantidad;
 }
