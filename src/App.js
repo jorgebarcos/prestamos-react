@@ -8,7 +8,7 @@ import { calcularTotal } from './helpers';
 
 class App extends Component {
 	datosPrestamo = (cantidad, plazo) => {
-		calcularTotal();
+		calcularTotal(cantidad, plazo);
 	};
 
 	render() {
