@@ -59,9 +59,9 @@ class Formulario extends Component {
 					<select onChange={this.actualizarState} name="plazo" className="u-full-width">
 						<option value="">Seleccionar</option>
 						<option value="3">3 Meses</option>
-						<option value="">6 Meses</option>
-						<option value="">12 Meses</option>
-						<option value="">24 Meses</option>
+						<option value="6">6 Meses</option>
+						<option value="12">12 Meses</option>
+						<option value="24">24 Meses</option>
 					</select>
 				</div>
 				<div>
