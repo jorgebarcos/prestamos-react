@@ -8,7 +8,7 @@ class Formulario extends Component {
 
 	actualizarState = (e) => {
 		// Lee datos del formulario
-		console.log(e.target.value);
+		//console.log(e.target.value);
 
 		const { name, value } = e.target;
 
@@ -16,6 +16,17 @@ class Formulario extends Component {
 		this.setState({
 			[name]: Number(value)
 		});
+	};
+
+	habilitarSubmit = () => {
+		// aplicar destructuring
+		const { cantidad, plazo } = this.state;
+		// leer las variables
+		const noValido = !cantidad || !plazo;
+
+		console.log(noValido);
+		// retornar una respuesta
+		return noValido;
 	};
 	render() {
 		const { cantidad } = this.state;
@@ -43,7 +54,12 @@ class Formulario extends Component {
 					</select>
 				</div>
 				<div>
-					<input type="submit" value="Calcular" className="u-full-width button-primary" />
+					<input
+						disabled={this.habilitarSubmit()}
+						type="submit"
+						value="Calcular"
+						className="u-full-width button-primary"
+					/>
 				</div>
 			</form>
 		);
