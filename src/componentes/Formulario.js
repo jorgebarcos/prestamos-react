@@ -40,8 +40,6 @@ class Formulario extends Component {
 		return noValido;
 	};
 	render() {
-		const { cantidad } = this.state;
-
 		return (
 			<form onSubmit={this.calcularPrestamo}>
 				<div>
