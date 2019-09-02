@@ -1,3 +1,14 @@
+# prestamos-react
+Simulador de prestamos creado con React
+
+## link https://prestamos-react.netlify.com/
+
+## preview
+![react app preview](https://github.com/jorgebarcos/prestamos-react/blob/master/screencapture-prestamos-react.png?raw=true)
+
+>>>>>>> 668aa80892fd99478bd6897b7e84237efa80e161
+
+
 <<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,6 +79,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 =======
-# prestamos-react
-Simulador de prestamos creado con React
->>>>>>> 668aa80892fd99478bd6897b7e84237efa80e161
+
